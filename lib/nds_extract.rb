@@ -4,7 +4,6 @@ require 'pry'
 pp directors_database
 
 def directors_totals(nds)
-  grand_total = 0
 director_index = 0 
 result = {}
 
@@ -13,6 +12,7 @@ result = {}
   
     directors_name = nds[director_index][:name]
     result[directors_name] = 0 #sets key:value pair
+    
     while movie_index < nds[director_index][:movies].length do 
    
        result[directors_name] += nds[director_index][:movies][movie_index][:worldwide_gross]
